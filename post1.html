@@ -1,0 +1,54 @@
+<html>
+<head></head>
+<body>
+<h1>Minecr4arft и PC</h1>
+<p>Помогите перегревается комп</p>
+<input type="text" id="author" />
+<input type="text" id="body" />
+<button id="button">Добавить комментарий</button> <div id="comments"></div>
+<style>
+      body{
+                background: rgb(192, 216, 190);
+            }
+            hr{
+                background-color:rgb(1, 90, 41);
+            }
+            p{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            h6{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            h4{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            h3{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            button{
+                background-color: rgb(157, 175, 155);
+            }
+            input{
+                background-color: rgb(157, 175, 155);
+            }
+</style>
+<script>
+let author = document.getElementById("author");
+let body = document.getElementById("body");
+let button = document.getElementById("button"); 
+let comments =  document.getElementById("comments");
+function enter() {
+        comments.innerHTML += `
+         <div>
+         <h3>${author.value}</h3>
+        <p>${body.value}</p>
+        </div>
+        `;
+        author.value="";
+        body.value ="";
+        }
+
+        button.onclick = enter;
+</script>
+</body>
+</html>
